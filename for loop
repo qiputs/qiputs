@@ -1,0 +1,43 @@
+//For each integer n  in the inclusive interval  a,b:
+
+If 1<n<9, then print the English representation of it in lowercase. That is "one" for , "two" for , and so on.
+Else if  n>9 and it is an even number, then print "even".
+Else if n>9 and it is an odd number, then print "odd". //
+
+
+#include <iostream>
+int main() {
+    int a;  // Start of the inclusive interval
+    int b; // End of the inclusive interval
+std::cin >> a >> b;
+    for (int n = a; n <= b; ++n) {
+        if (1 <= n && n <= 9) {
+            // Print the English representation of n in lowercase
+            if (n == 2) {
+                std::cout << "two" << std::endl;
+            } else if (n == 3) {
+                std::cout << "three" << std::endl;
+            } else if (n == 4) {
+                std::cout << "four" << std::endl;
+            } else if (n == 5) {
+                std::cout << "five" << std::endl;
+            } else if (n == 6) {
+                std::cout << "six" << std::endl;
+            } else if (n == 7) {
+                std::cout << "seven" << std::endl;
+            } else if (n == 8) {
+                std::cout << "eight" << std::endl;
+            } else if (n == 9) {
+                std::cout << "nine" << std::endl;
+            }
+        } else if (n > 9) {
+            if (n % 2 == 0) {
+                std::cout << "even" << std::endl;
+            } else {
+                std::cout << "odd" << std::endl;
+            }
+        }
+    }
+
+    return 0;
+}
